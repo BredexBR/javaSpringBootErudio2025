@@ -3,11 +3,34 @@
 Projeto realizado para acompanhar o curso da udemy "Aprenda Spring Boot framework Swagger Docker Kubernetes K8s API RESTful
 JWT JUnit 5 Mockito React JS do 0 à AWS e GCP e+" e aprender seus conceitos.
 
+## Greeting
+
+Implementa um serviço HTTP que retorna uma saudação personalizada.
+
+- Quando um nome é fornecido na requisição, a resposta será: `"Hello, <nome>!"`.
+- Caso nenhum nome seja informado, o retorno padrão será: `"Hello, World!"`.
+
+### Exemplo de requisição
+
 ![aula04](imgs/04.png)
 
-## Spring Boot Initialzr
+## Math
 
-link para acessar clique [aqui](https://start.spring.io/)
+Este projeto implementa um serviço HTTP que realiza cálculos matemáticos simples, incluindo:
+
+- Soma
+- Subtração
+- Multiplicação
+- Raiz quadrada
+- Média
+
+### Exemplo de requisição
+
+![Aula05](imgs/05.png)
+
+## Spring Boot Initializr
+
+Para gerar um novo projeto Spring Boot, acesse o [Spring Initializr](https://start.spring.io/).
 
 ### Dependências utilizadas:
 
