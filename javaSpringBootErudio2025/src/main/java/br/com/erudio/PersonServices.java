@@ -11,18 +11,40 @@ import java.util.logging.Logger;
 @Service
 public class PersonServices {
 
-    private final AtomicLong counter = new AtomicLong();
+	private final AtomicLong counter = new AtomicLong();
 
-    private Logger logger = Logger.getLogger(PersonServices.class.getName());
+	private Logger logger = Logger.getLogger(PersonServices.class.getName());
+
+	public List<Person> findAll() {
+
+		logger.info("Finding all People!");
+
+		List<Person> persons = new ArrayList<Person>();
+		for (int i = 0; i < 8; i++) {
+			Person person = mockPerson(i);
+			persons.add(person);
+		}
+		return persons;
+	}
 
 	public Person findById(String id) {
-	logger.info("Finding one Person!");
+		logger.info("Finding one Person!");
 
 		Person person = new Person();
 		person.setId(counter.incrementAndGet());
-		person.setFirstName("Breno");
-		person.setLastName("Ferreira");
-		person.setAddress("São Paulo - São Paulo - Brasil");
+		person.setFirstName("Leandro");
+		person.setLastName("Costa");
+		person.setAddress("Uberlândia - Minas Gerais - Brasil");
+		person.setGender("Male");
+		return person;
+	}
+
+	private Person mockPerson(int i) {
+		Person person = new Person();
+		person.setId(counter.incrementAndGet());
+		person.setFirstName("Firstname " + i);
+		person.setLastName("Lastname " + i);
+		person.setAddress("Some Address in Brasil");
 		person.setGender("Male");
 		return person;
 	}

@@ -5,11 +5,23 @@ JWT JUnit 5 Mockito React JS do 0 à AWS e GCP e+" e aprender seus conceitos.
 
 # Person
 
-Este projeto implementa um serviço HTTP `POST` utilizando Java com Spring Boot. Ele simula o envio de dados de uma pessoa para o servidor por meio de um [mock](#o-que-é-um-mock).
+Este projeto implementa serviços HTTP (`POST`, `GET`, `DELETE` e `PUT`) utilizando Java com Spring Boot. Ele simula todos os serviços relacionados aos dados de uma pessoa, utilizando um [mock](#o-que-é-um-mock) como fonte de dados.
 
-A aplicação tem como objetivo demonstrar a criação de uma API RESTful simples, utilizando boas práticas de desenvolvimento, com foco em testes e simulação de dados.<br>
+## FindByID
 
-![Exemplo Post](imgs/06-Post.png)
+Retorna uma pessoa de acordo com o seu ID:
+
+<br>
+
+![Exemplo FindByID](imgs/06-findById.png)
+
+## FindAll
+
+Retorna todas as pessoas presentes no [mock](#o-que-é-um-mock):
+
+<br>
+
+![Exemplo FindAll](imgs/06-findAll.png)
 
 ## O que é um Mock?
 
