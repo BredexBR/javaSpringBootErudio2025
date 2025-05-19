@@ -59,9 +59,7 @@ Para gerar um novo projeto Spring Boot, acesse o [Spring Initializr](https://sta
 
 ### Dependências utilizadas:
 
-- Spring Boot DevTools
-
-- Spring Web
+[pom.xml](https://github.com/BredexBR/javaSpringBootErudio2025/blob/main/javaSpringBootErudio2025/pom.xml)
 
 ## Pré-requisitos
 
