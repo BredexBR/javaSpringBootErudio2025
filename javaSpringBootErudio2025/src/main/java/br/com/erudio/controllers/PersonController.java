@@ -1,6 +1,6 @@
 package br.com.erudio.controllers;
 
-import br.com.erudio.PersonServices;
+import br.com.erudio.services.PersonServices;
 import br.com.erudio.model.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;

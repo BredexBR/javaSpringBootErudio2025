@@ -25,3 +25,25 @@ No Spring Boot, as _annotations_ (anotações) são utilizadas para configurar e
 
 - **@Service**  
   Indica que a classe é um serviço de negócio e será gerenciada pelo Spring como um _bean_. Essa anotação ajuda a organizar a lógica de negócio da aplicação, separando-a dos controladores e repositórios.
+
+## 📦 Persistência e JPA
+
+- **@Entity**  
+  Indica que a classe é uma entidade JPA, ou seja, será mapeada para uma tabela no banco de dados.
+
+- **@Table**  
+  Especifica o nome da tabela no banco de dados correspondente à entidade. Se não for usada, o nome da tabela será igual ao nome da classe.
+
+- **@Id**  
+  Marca o campo que será usado como chave primária da entidade.
+
+- **@GeneratedValue**  
+  Define a estratégia de geração automática de valores para a chave primária (`@Id`), como `AUTO`, `IDENTITY`, `SEQUENCE`, etc.
+
+- **@Column**  
+  Permite configurar detalhes da coluna no banco de dados, como nome, tamanho, se pode ser `null`, entre outros.
+
+## 🔧 Java Comum
+
+- **@Override**
+  Indica que um método sobrescreve um método da superclasse ou implementa um método de uma interface. Ajuda a evitar erros de digitação e melhora a legibilidade do código.
