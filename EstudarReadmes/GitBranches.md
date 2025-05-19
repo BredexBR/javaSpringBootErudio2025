@@ -7,7 +7,7 @@ Durante meus estudos de programação, percebi que uma ótima forma de manter tu
 Para cada novo tópico, crio uma branch separada a partir da `main`, garantindo que cada conceito fique bem organizado e isolado:
 
 ```sh
-git switch -b 04_primeirosPassosComSpringBoot  # Cria e troca para a nova branch
+git checkout -b 04_primeirosPassosComSpringBoot  # Cria e troca para a nova branch
 ```
 
 Isso cria uma nova branch chamada `04_primeirosPassosComSpringBoot` baseada na `main`.
