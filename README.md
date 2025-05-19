@@ -3,30 +3,19 @@
 Projeto realizado para acompanhar o curso da udemy "Aprenda Spring Boot framework Swagger Docker Kubernetes K8s API RESTful
 JWT JUnit 5 Mockito React JS do 0 à AWS e GCP e+" e aprender seus conceitos.
 
-## Greeting
+# Person
 
-Implementa um serviço HTTP que retorna uma saudação personalizada.
+Este projeto implementa um serviço HTTP `POST` utilizando Java com Spring Boot. Ele simula o envio de dados de uma pessoa para o servidor por meio de um [mock](#o-que-é-um-mock).
 
-- Quando um nome é fornecido na requisição, a resposta será: `"Hello, <nome>!"`.
-- Caso nenhum nome seja informado, o retorno padrão será: `"Hello, World!"`.
+A aplicação tem como objetivo demonstrar a criação de uma API RESTful simples, utilizando boas práticas de desenvolvimento, com foco em testes e simulação de dados.<br>
 
-### Exemplo de requisição
+![Exemplo Post](imgs/06-Post.png)
 
-![aula04](imgs/04.png)
+## O que é um Mock?
 
-## Math
+Um _mock_ é uma simulação de um objeto real. Em contextos de desenvolvimento e testes, mocks são usados para representar dados ou comportamentos esperados de componentes que ainda não foram implementados, ou que não se deseja acessar diretamente (como chamadas a APIs externas ou bancos de dados).
 
-Este projeto implementa um serviço HTTP que realiza cálculos matemáticos simples, incluindo:
-
-- Soma
-- Subtração
-- Multiplicação
-- Raiz quadrada
-- Média
-
-### Exemplo de requisição
-
-![Aula05](imgs/05.png)
+No contexto deste projeto, o _mock_ de pessoa é uma classe ou objeto com atributos pré-definidos (como nome, idade, CPF, etc.) que representa uma instância de `Person`. Ele é utilizado para simular uma requisição HTTP de criação de pessoa, facilitando o desenvolvimento e os testes do serviço sem depender de entradas externas.
 
 ## Spring Boot Initializr
 
