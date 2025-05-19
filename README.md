@@ -23,6 +23,30 @@ Retorna todas as pessoas presentes no [mock](#o-que-é-um-mock):
 
 ![Exemplo FindAll](imgs/06-findAll.png)
 
+## Create
+
+Cria uma pessoa:
+
+<br>
+
+![Exemplo Create](imgs/06-create.png)
+
+## Update
+
+Atualiza os dados de uma pessoa:
+
+<br>
+
+![Exemplo Update](imgs/06-update.png)
+
+## Delete
+
+Deleta os dados de uma pessoa:
+
+<br>
+
+![Exemplo Delete](imgs/06-Delete.png)
+
 ## O que é um Mock?
 
 Um _mock_ é uma simulação de um objeto real. Em contextos de desenvolvimento e testes, mocks são usados para representar dados ou comportamentos esperados de componentes que ainda não foram implementados, ou que não se deseja acessar diretamente (como chamadas a APIs externas ou bancos de dados).

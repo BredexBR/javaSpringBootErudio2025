@@ -32,12 +32,34 @@ public class PersonServices {
 
 		Person person = new Person();
 		person.setId(counter.incrementAndGet());
-		person.setFirstName("Leandro");
-		person.setLastName("Costa");
-		person.setAddress("Uberlândia - Minas Gerais - Brasil");
+		person.setFirstName("Breno");
+		person.setLastName("Ferreira");
+		person.setAddress("São Paulo - São Paulo - Brasil");
 		person.setGender("Male");
 		return person;
 	}
+
+	public Person create(Person person) {
+
+		logger.info("Creating one Person!");
+
+		return person;
+	}
+
+	public Person update(Person person) {
+
+		logger.info("Updating one Person!");
+
+		return person;
+	}
+
+	public void delete(String id) {
+
+		logger.info("Deleting one Person!");
+
+	}
+
+
 
 	private Person mockPerson(int i) {
 		Person person = new Person();
