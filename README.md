@@ -47,6 +47,22 @@ Deleta os dados de uma pessoa:
 
 ![Exemplo Delete](imgs/06-Delete.png)
 
+## Logs no Spring Boot
+
+O projeto também utiliza logs para registrar o comportamento da aplicação durante a execução, facilitando o processo de depuração e monitoramento.
+
+Para isso, foi utilizada a biblioteca **SLF4J** (Simple Logging Facade for Java), que fornece uma interface para diversas implementações de logging.
+
+### Níveis de log disponíveis:
+
+- `TRACE` – nível mais detalhado, geralmente usado para rastreamento fino
+- `DEBUG` – informações úteis para desenvolvedores durante a depuração
+- `INFO` – mensagens informativas sobre o fluxo normal da aplicação
+- `WARN` – indica situações de alerta que não interrompem o sistema
+- `ERROR` – indica falhas ou erros que exigem atenção
+
+> Os logs ajudam a manter o controle do que está acontecendo na aplicação sem a necessidade de usar `System.out.println()`.
+
 ## O que é um Mock?
 
 Um _mock_ é uma simulação de um objeto real. Em contextos de desenvolvimento e testes, mocks são usados para representar dados ou comportamentos esperados de componentes que ainda não foram implementados, ou que não se deseja acessar diretamente (como chamadas a APIs externas ou bancos de dados).
