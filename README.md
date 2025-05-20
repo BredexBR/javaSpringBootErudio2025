@@ -5,7 +5,7 @@ JWT JUnit 5 Mockito React JS do 0 à AWS e GCP e+" e aprender seus conceitos.
 
 # Person
 
-Este projeto implementa serviços HTTP (`POST`, `GET`, `DELETE` e `PUT`) utilizando Java com Spring Boot. Ele simula todos os serviços relacionados aos dados de uma pessoa, utilizando um [mock](#o-que-é-um-mock) como fonte de dados.
+Este projeto implementa serviços HTTP (`POST`, `GET`, `DELETE` e `PUT`) utilizando Java com Spring Boot. Inicialmente, os dados eram simulados com [mocks](#o-que-é-um-mock), mas o projeto foi evoluído para realizar operações reais de CRUD utilizando um banco de dados MySQL com JPA (Java Persistence API).
 
 ## FindByID
 

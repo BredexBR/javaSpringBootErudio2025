@@ -10,6 +10,18 @@ No Spring Boot, as _annotations_ (anotações) são utilizadas para configurar e
 - **@RequestMapping**  
   Define a rota base ou específica para um método ou classe. Pode ser usada com métodos `GET`, `POST`, `PUT`, `DELETE`, entre outros.
 
+- **@RequestMapping**  
+  Define a rota base ou específica para um método ou classe. Pode ser usada com métodos `GET`, `POST`, `PUT`, `DELETE`, entre outros.
+
+- **@GetMapping**
+  Especialização de `@RequestMapping` para requisições HTTP do tipo `GET`. Usada para obter dados (ex: buscar todos os usuários).
+
+- **@PostMapping**  
+  Especialização de `@RequestMapping` para requisições HTTP do tipo `POST`. Usada para criar novos recursos (ex: cadastrar um novo usuário).
+
+- **@PutMapping**
+  Especialização de `@RequestMapping` para requisições HTTP do tipo `PUT`. Usada para atualizar recursos existentes.
+
 - **@PathVariable**  
   Indica que o valor de um parâmetro de método será extraído de uma parte da URL. Muito usado para capturar IDs, por exemplo: `/person/{id}`.
 
@@ -47,3 +59,8 @@ No Spring Boot, as _annotations_ (anotações) são utilizadas para configurar e
 
 - **@Override**
   Indica que um método sobrescreve um método da superclasse ou implementa um método de uma interface. Ajuda a evitar erros de digitação e melhora a legibilidade do código.
+
+@GetMapping
+@PostMapping
+@PutMapping
+@DeleteMapping
