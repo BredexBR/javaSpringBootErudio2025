@@ -81,6 +81,14 @@ Para realizar a conversão entre entidades e DTOs, foi utilizada a biblioteca **
 
 > 📌 À medida que novos endpoints forem adicionados, novos DTOs serão criados para representar os dados da forma mais adequada para cada caso de uso.
 
+## Versionamento da API
+
+Para garantir a evolução da API sem quebrar funcionalidades já existentes, este projeto adota **versionamento via URI**. Cada nova versão da API pode conter mudanças no contrato, como adição ou remoção de campos, alterações de lógica ou estrutura dos dados retornados.
+
+<br>
+
+![Exemplo Versionamento](imgs/10-V2.png)
+
 ## O que é um Mock?
 
 Um _mock_ é uma simulação de um objeto real. Em contextos de desenvolvimento e testes, mocks são usados para representar dados ou comportamentos esperados de componentes que ainda não foram implementados, ou que não se deseja acessar diretamente (como chamadas a APIs externas ou bancos de dados).
