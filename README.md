@@ -63,6 +63,24 @@ Para isso, foi utilizada a biblioteca **SLF4J** (Simple Logging Facade for Java)
 
 > Os logs ajudam a manter o controle do que está acontecendo na aplicação sem a necessidade de usar `System.out.println()`.
 
+## Padrão DTO com Dozer Mapper
+
+O projeto também adota o padrão **DTO (Data Transfer Object)** para separar a camada de apresentação dos modelos de entidade. Isso promove maior segurança, controle e clareza na exposição de dados via API.
+
+Para realizar a conversão entre entidades e DTOs, foi utilizada a biblioteca **Dozer Mapper**, que simplifica o mapeamento automático entre objetos com estruturas semelhantes.
+
+### Vantagens do uso de DTOs:
+
+- Evita exposição direta de entidades JPA
+
+- Facilita a criação de respostas customizadas
+
+- Permite maior controle sobre os dados trafegados na API
+
+- Ajuda na validação de entrada e saída de dados
+
+> 📌 À medida que novos endpoints forem adicionados, novos DTOs serão criados para representar os dados da forma mais adequada para cada caso de uso.
+
 ## O que é um Mock?
 
 Um _mock_ é uma simulação de um objeto real. Em contextos de desenvolvimento e testes, mocks são usados para representar dados ou comportamentos esperados de componentes que ainda não foram implementados, ou que não se deseja acessar diretamente (como chamadas a APIs externas ou bancos de dados).
