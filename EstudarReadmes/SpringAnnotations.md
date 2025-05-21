@@ -60,7 +60,31 @@ No Spring Boot, as _annotations_ (anotações) são utilizadas para configurar e
 - **@Override**
   Indica que um método sobrescreve um método da superclasse ou implementa um método de uma interface. Ajuda a evitar erros de digitação e melhora a legibilidade do código.
 
-@GetMapping
-@PostMapping
-@PutMapping
-@DeleteMapping
+## 🧾 Serialização JSON (Jackson)
+
+- **@JsonFilter**  
+  Permite definir filtros dinâmicos de propriedades que devem ser incluídas ou excluídas durante a serialização. Requer configuração adicional no `ObjectMapper`.
+
+- **@JsonProperty**  
+  Define o nome da propriedade no JSON. Útil para mapear nomes diferentes entre os atributos Java e o JSON, ou para garantir a ordem de serialização.
+
+- **@JsonInclude**  
+  Controla quais propriedades devem ser incluídas na serialização. Por exemplo, pode ser usado para ignorar valores `null` ou vazios:
+
+  ```java
+  @JsonInclude(JsonInclude.Include.NON_NULL)
+  ```
+
+- **@JsonFormat**  
+  Define o formato de datas, números ou outros valores durante a serialização. Exemplo para datas:
+
+  ```java
+  @JsonFormat(pattern = "dd/MM/yyyy")
+  private LocalDate nascimento;
+  ```
+
+- **@JsonIgnore**  
+  Indica que a propriedade não deve ser incluída na serialização ou desserialização JSON.
+
+- **@JsonSerialize**  
+  Permite especificar uma classe customizada de serialização. É útil quando se quer controlar exatamente como um valor será convertido para JSON.

@@ -17,7 +17,7 @@ Retorna uma pessoa de acordo com o seu ID:
 
 ## FindAll
 
-Retorna todas as pessoas presentes no [mock](#o-que-é-um-mock):
+Retorna todas as pessoas presentes:
 
 <br>
 
