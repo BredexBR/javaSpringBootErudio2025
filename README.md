@@ -81,6 +81,41 @@ Para realizar a conversão entre entidades e DTOs, foi utilizada a biblioteca **
 
 > 📌 À medida que novos endpoints forem adicionados, novos DTOs serão criados para representar os dados da forma mais adequada para cada caso de uso.
 
+## Migrações com Flyway
+
+Este projeto utiliza a ferramenta **Flyway** para controle de versionamento e execução automática de migrações no banco de dados. Assim, garantimos que o esquema do banco esteja sempre sincronizado com o estado esperado da aplicação, independentemente do ambiente em que estiver rodando.
+
+### O que é o Flyway?
+
+O Flyway é uma biblioteca de versionamento de banco de dados que executa scripts SQL em sequência, com base em um esquema de versionamento (`V1__`, `V2__`, etc.). Ele mantém um histórico das migrações já aplicadas, evitando que scripts sejam executados mais de uma vez e facilitando o gerenciamento das mudanças no banco.
+
+### Estrutura dos arquivos de migração
+
+Os scripts SQL ficam localizados em:  
+`src/main/resources/db/migration`
+
+Cada arquivo de migração deve seguir a seguinte convenção de nomenclatura:  
+`V<versão>__<descrição>.sql`
+
+### Exemplo de arquivo de migração
+
+```sql
+V1__create_table_person.sql
+```
+
+### Benefícios de usar Flyway:
+
+- Evita conflitos e inconsistências no banco entre ambientes
+- Controla a ordem das alterações no esquema
+- Permite reverter o estado do banco em ambientes de teste
+- Mantém um histórico confiável das alterações aplicadas
+
+> 📌 À medida que o projeto evolui, novas migrações serão adicionadas para refletir alterações nas entidades ou regras de negócio.
+
+<br>
+
+![Exemplo SQL](imgs/11-bd.png)
+
 ## O que é um Mock?
 
 Um _mock_ é uma simulação de um objeto real. Em contextos de desenvolvimento e testes, mocks são usados para representar dados ou comportamentos esperados de componentes que ainda não foram implementados, ou que não se deseja acessar diretamente (como chamadas a APIs externas ou bancos de dados).
