@@ -116,6 +116,30 @@ V1__create_table_person.sql
 
 ![Exemplo SQL](imgs/11-bd.png)
 
+## Content Negotiation
+
+Este projeto implementa **Content Negotiation**, permitindo que as requisições HTTP aceitem e retornem dados em múltiplos formatos, como:
+
+- `application/json`
+- `application/xml`
+- `application/x-yaml`
+
+Com isso, o cliente pode escolher o formato de resposta desejado utilizando o cabeçalho `Accept`.
+
+### Vantagens
+
+- Flexibilidade para integrar com diferentes tipos de clientes
+
+- Melhora a interoperabilidade da API
+
+- Facilita testes e desenvolvimento com ferramentas como Postman, Insomnia e cURL
+
+> 📌 A configuração de Content Negotiation foi feita com base no uso do WebMvcConfigurer no Spring Boot, definindo os MediaType suportados e suas extensões correspondentes.
+
+<br>
+
+![Exemplo Content Negotiation](imgs/13-bd.png)
+
 ## O que é um Mock?
 
 Um _mock_ é uma simulação de um objeto real. Em contextos de desenvolvimento e testes, mocks são usados para representar dados ou comportamentos esperados de componentes que ainda não foram implementados, ou que não se deseja acessar diretamente (como chamadas a APIs externas ou bancos de dados).
