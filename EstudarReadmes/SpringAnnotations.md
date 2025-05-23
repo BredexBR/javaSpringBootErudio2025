@@ -88,3 +88,23 @@ No Spring Boot, as _annotations_ (anotações) são utilizadas para configurar e
 
 - **@JsonSerialize**  
   Permite especificar uma classe customizada de serialização. É útil quando se quer controlar exatamente como um valor será convertido para JSON.
+
+## 🧪 Testes Unitários (JUnit 5 e Mockito)
+
+- **@TestInstance**  
+  Define o ciclo de vida da instância de teste. Com `TestInstance.Lifecycle.PER_CLASS`, o JUnit cria apenas uma instância da classe de teste, permitindo o uso de métodos não estáticos com `@BeforeAll`.
+
+- **@ExtendWith**  
+  Usado para estender o comportamento do JUnit 5, como habilitar o suporte ao Mockito com `@ExtendWith(MockitoExtension.class)`.
+
+- **@InjectMocks**  
+  Cria uma instância da classe e injeta os objetos anotados com `@Mock` nela. Usado para testar a classe com suas dependências simuladas.
+
+- **@Mock**  
+  Cria objetos mock (falsos) que simulam o comportamento de dependências externas.
+
+- **@BeforeEach**  
+  Define um método que será executado antes de cada método de teste. Ideal para inicializar variáveis ou configurar mocks.
+
+- **@Test**  
+  Indica que o método é um teste e deve ser executado pelo JUnit.

@@ -140,6 +140,46 @@ Com isso, o cliente pode escolher o formato de resposta desejado utilizando o ca
 
 ![Exemplo Content Negotiation](imgs/13-bd.png)
 
+## HATEOAS
+
+Este projeto implementa **HATEOAS (Hypermedia as the Engine of Application State)** para enriquecer as respostas da API com links de navegação relacionados às ações possíveis no recurso.
+
+Cada resposta dos endpoints inclui referências para outras operações relevantes, como:
+
+- **Create** – Criação de novos recursos
+- **FindById** – Consulta de recurso específico
+- **FindAll** – Listagem de todos os recursos
+- **Update** – Atualização de dados
+- **Delete** – Remoção de recurso
+
+Isso facilita a navegação e a compreensão da API por parte do consumidor, promovendo um design mais RESTful.
+
+<br>
+
+![HATEOS](imgs/14-HATEOS.png)
+
+## Testes unitários com Mockito e JUnit 5
+
+Os testes unitários deste projeto são escritos utilizando **JUnit 5** em conjunto com o **Mockito**, garantindo a qualidade e a confiabilidade das funcionalidades da API.
+
+As principais operações da API (Create, FindById, FindAll, Update e Delete) são testadas de forma isolada, com simulação de dependências externas através do Mockito.
+
+### Benefícios:
+
+- Validação automática do comportamento esperado da aplicação
+- Redução de bugs e regressões em alterações futuras
+- Facilidade de manutenção do código
+- Maior confiança em deploys e integrações contínuas
+
+Os testes estão localizados no diretório:  
+`src/test/java/br/com/erudio/services/PersonServicesTest`
+
+> 📌 À medida que novas funcionalidades forem implementadas, novos testes unitários serão adicionados para cobrir os cenários correspondentes.
+
+<br>
+
+![Testes Unitários](imgs/14-TstMock.png)
+
 ## O que é um Mock?
 
 Um _mock_ é uma simulação de um objeto real. Em contextos de desenvolvimento e testes, mocks são usados para representar dados ou comportamentos esperados de componentes que ainda não foram implementados, ou que não se deseja acessar diretamente (como chamadas a APIs externas ou bancos de dados).
