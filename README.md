@@ -180,6 +180,10 @@ Os testes estão localizados no diretório:
 
 ![Testes Unitários](imgs/14-TstMock.png)
 
+## Documentação com Swagger (SpringDoc OpenAPI)
+
+Este projeto utiliza a biblioteca [SpringDoc OpenAPI](https://springdoc.org/#google_vignette) para gerar automaticamente a documentação interativa da API no padrão Swagger.
+
 ## O que é um Mock?
 
 Um _mock_ é uma simulação de um objeto real. Em contextos de desenvolvimento e testes, mocks são usados para representar dados ou comportamentos esperados de componentes que ainda não foram implementados, ou que não se deseja acessar diretamente (como chamadas a APIs externas ou bancos de dados).
