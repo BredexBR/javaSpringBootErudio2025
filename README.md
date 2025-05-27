@@ -11,6 +11,7 @@ JWT JUnit 5 Mockito React JS do 0 à AWS e GCP e+" e aprender seus conceitos.
 - [Create](#create)
 - [Update](#update)
 - [Delete](#delete)
+- [Book](#book)
 - [Logs no Spring Boot](#logs-no-spring-boot)
 - [Padrão DTO com Dozer Mapper](#padrão-dto-com-dozer-mapper)
 - [Migrações com Flyway](#migrações-com-flyway)
@@ -65,6 +66,10 @@ Deleta os dados de uma pessoa:
 <br>
 
 ![Exemplo Delete](imgs/06-Delete.png)
+
+## Book
+
+Este projeto também implementa serviços HTTP (`POST`, `GET`, `DELETE` e `PUT`) para a entidade **Book**, utilizando Java com Spring Boot. Assim como na entidade [Person](#person), realiza CRUD com um banco de dados MySQL utilizando JPA (Java Persistence API).
 
 ## Logs no Spring Boot
 
