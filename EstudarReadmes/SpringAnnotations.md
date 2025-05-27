@@ -108,3 +108,20 @@ No Spring Boot, as _annotations_ (anotações) são utilizadas para configurar e
 
 - **@Test**  
   Indica que o método é um teste e deve ser executado pelo JUnit.
+
+## 📚 Documentação com Swagger (OpenAPI)
+
+- **@Operation**  
+  Descreve uma operação de API, como o título, descrição e parâmetros.
+
+- **@ApiResponse**  
+  Define a resposta esperada da operação.
+
+- **@Content**  
+  Utilizada dentro de `@ApiResponse` para descrever o tipo de mídia e schema da resposta.
+
+- **@ArraySchema**  
+  Especifica o schema para arrays de objetos.
+
+- **@Schema**  
+  Descreve a estrutura de um objeto de dados.
