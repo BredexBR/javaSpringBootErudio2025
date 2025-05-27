@@ -183,6 +183,12 @@ Os testes estão localizados no diretório:
 ## Documentação com Swagger (SpringDoc OpenAPI)
 
 Este projeto utiliza a biblioteca [SpringDoc OpenAPI](https://springdoc.org/#google_vignette) para gerar automaticamente a documentação interativa da API no padrão Swagger.
+<br>
+
+Para se aprofundar mais acessar o [link](https://lankydan.dev/documenting-a-spring-rest-api-following-the-openapi-specification).
+<br>
+
+![Swagger](imgs/15-swagger.png)
 
 ## O que é um Mock?
 
