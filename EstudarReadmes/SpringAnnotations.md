@@ -55,6 +55,13 @@ No Spring Boot, as _annotations_ (anotações) são utilizadas para configurar e
 - **@Column**  
   Permite configurar detalhes da coluna no banco de dados, como nome, tamanho, se pode ser `null`, entre outros.
 
+- **@Temporal**  
+  Usada em campos do tipo `java.util.Date` ou `java.util.Calendar` para especificar o tipo de dado temporal que será armazenado no banco. Pode ser usada com os valores:
+
+  - `TemporalType.DATE` (apenas data)
+  - `TemporalType.TIME` (apenas hora)
+  - `TemporalType.TIMESTAMP` (data e hora)
+
 ## 🔧 Java Comum
 
 - **@Override**
