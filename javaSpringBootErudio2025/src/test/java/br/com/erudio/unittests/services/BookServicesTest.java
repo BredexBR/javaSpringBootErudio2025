@@ -1,10 +1,10 @@
-package br.com.erudio.services;
+package br.com.erudio.unittests.services;
 
 import br.com.erudio.data.dto.BookDTO;
 import br.com.erudio.exception.RequiredObjectIsNullException;
 import br.com.erudio.model.Book;
 import br.com.erudio.repository.BookRepository;
-import br.com.erudio.unitetests.mapper.mocks.MockBook;
+import br.com.erudio.unittests.mapper.mocks.MockBook;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -99,7 +99,7 @@ class BookServicesTest {
 
         BookDTO dto = input.mockDTO(1);
 
-        when(repository.save(book)).thenReturn(persisted);
+        when(repository.save(any(Book.class))).thenReturn(persisted);
 
         var result = service.create(dto);
 

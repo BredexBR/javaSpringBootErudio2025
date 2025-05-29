@@ -18,6 +18,7 @@ JWT JUnit 5 Mockito React JS do 0 à AWS e GCP e+" e aprender seus conceitos.
 - [Content Negotiation](#content-negotiation)
 - [HATEOAS](#hateoas)
 - [Testes unitários com Mockito e JUnit 5](#testes-unitários-com-mockito-e-junit-5)
+- [Testes de Integração](#testes-de-integração)
 - [Documentação com Swagger (SpringDoc OpenAPI)](#documentação-com-swagger-springdoc-openapi)
 - [O que é um Mock?](#o-que-é-um-mock)
 - [Spring Boot Initializr](#spring-boot-initializr)
@@ -182,7 +183,7 @@ Isso facilita a navegação e a compreensão da API por parte do consumidor, pro
 
 ![HATEOS](imgs/14-HATEOS.png)
 
-## Testes unitários com Mockito e JUnit 5
+## Testes unitários
 
 Os testes unitários deste projeto são escritos utilizando **JUnit 5** em conjunto com o **Mockito**, garantindo a qualidade e a confiabilidade das funcionalidades da API.
 
@@ -203,6 +204,50 @@ Os testes estão localizados no diretório:
 <br>
 
 ![Testes Unitários](imgs/14-TstMock.png)
+
+## Testes de Integração
+
+Para garantir que os endpoints da API estejam funcionando corretamente em conjunto com o ambiente real de execução, o projeto utiliza testes de integração com as bibliotecas **[Testcontainers](https://www.testcontainers.org/)** e **[Rest Assured](https://rest-assured.io/)**.
+
+### Testcontainers
+
+Com o Testcontainers, é possível criar e gerenciar containers Docker diretamente nos testes automatizados, garantindo um ambiente isolado e consistente. Neste projeto, é utilizado um container MySQL, configurado dinamicamente durante os testes.
+
+#### Vantagens do uso do Testcontainers:
+
+- Evita dependência de banco de dados local ou ambiente externo
+- Garante um ambiente de testes consistente para todos os desenvolvedores
+- Possibilita integração contínua com testes reais de banco de dados
+- Os dados são descartados ao final dos testes, mantendo o ambiente limpo
+
+> 📌 A configuração do Testcontainers está localizada nos arquivos de teste da entidade `Person`.
+
+### Rest Assured
+
+A biblioteca **Rest Assured** é utilizada para simular e validar chamadas HTTP diretamente nos testes, permitindo verificar o comportamento dos endpoints da API em nível de integração.
+
+#### Com o Rest Assured é possível:
+
+- Enviar requisições HTTP `GET`, `POST`, `PUT`, `DELETE` de forma fluente
+- Validar os códigos de resposta (200, 201, 404, etc.)
+- Testar os payloads de entrada e saída com facilidade
+- Verificar headers, corpo da resposta e tempo de resposta
+
+#### Exemplo de fluxo testado:
+
+1. **Criar** uma pessoa com `POST /api/person/v1`
+2. **Consultar** com `GET /api/person/v1/{id}`
+3. **Atualizar** com `PUT /api/person/v1`
+4. **Excluir** com `DELETE /api/person/v1/{id}`
+
+Esses testes verificam desde a persistência no banco até o retorno correto dos dados via HTTP.
+
+### Benefícios dos testes de integração:
+
+- Validação de ponta a ponta da aplicação (API + Banco)
+- Redução de erros em produção
+- Simulação de ambiente real
+- Confiança na cobertura dos principais fluxos de negócio
 
 ## Documentação com Swagger (SpringDoc OpenAPI)
 
