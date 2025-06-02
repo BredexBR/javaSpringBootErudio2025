@@ -96,7 +96,7 @@ No Spring Boot, as _annotations_ (anotações) são utilizadas para configurar e
 - **@JsonSerialize**  
   Permite especificar uma classe customizada de serialização. É útil quando se quer controlar exatamente como um valor será convertido para JSON.
 
-## 🧪 Testes Unitários (JUnit 5 e Mockito)
+## 🧪 Testes Unitários e Integração (JUnit 5, Mockito, REST Assured e Test Containers)
 
 - **@TestInstance**  
   Define o ciclo de vida da instância de teste. Com `TestInstance.Lifecycle.PER_CLASS`, o JUnit cria apenas uma instância da classe de teste, permitindo o uso de métodos não estáticos com `@BeforeAll`.
@@ -113,8 +113,17 @@ No Spring Boot, as _annotations_ (anotações) são utilizadas para configurar e
 - **@BeforeEach**  
   Define um método que será executado antes de cada método de teste. Ideal para inicializar variáveis ou configurar mocks.
 
+- **@BeforeAll**  
+  Executa um método **uma única vez antes de todos os testes** da classe. Quando usado com `@TestInstance(Lifecycle.PER_CLASS)`, o método pode ser **não estático**.
+
 - **@Test**  
   Indica que o método é um teste e deve ser executado pelo JUnit.
+
+- **@TestMethodOrder**  
+  Controla a ordem de execução dos métodos de teste. Pode ser usado com `OrderAnnotation.class` para definir uma ordem específica via `@Order`.
+
+- **@Order**  
+  Define a **ordem de execução** de um método de teste quando `@TestMethodOrder(OrderAnnotation.class)` está presente.
 
 ## 📚 Documentação com Swagger (OpenAPI)
 

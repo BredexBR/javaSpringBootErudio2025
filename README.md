@@ -23,6 +23,7 @@ JWT JUnit 5 Mockito React JS do 0 à AWS e GCP e+" e aprender seus conceitos.
 - [O que é um Mock?](#o-que-é-um-mock)
 - [Spring Boot Initializr](#spring-boot-initializr)
 - [Pré-requisitos](#pré-requisitos)
+- [CORS](#cors)
 
 ## Person
 
@@ -258,6 +259,32 @@ Para se aprofundar mais acessar o [link](https://lankydan.dev/documenting-a-spri
 <br>
 
 ![Swagger](imgs/15-swagger.png)
+
+## CORS
+
+Este projeto implementa a configuração de **CORS (Compartilhamento de Recursos entre Origens Diferentes)** para permitir que aplicações frontend (como React, Angular, etc.) possam se comunicar com a API mesmo estando hospedadas em domínios diferentes.
+
+### O que é CORS?
+
+CORS(Cross-Origin Resource Sharing) é um mecanismo de segurança dos navegadores que impede requisições entre diferentes origens (domínios) caso não estejam explicitamente autorizadas. Sem essa configuração, ao tentar consumir a API de um frontend hospedado em outra origem, o navegador bloquearia a requisição.
+
+### Exemplo de problema comum:
+
+Uma aplicação frontend hospedada em `http://localhost:3000` tenta acessar a API em `http://localhost:8080`, resultando em erro de CORS caso não esteja permitido.
+
+### Solução adotada no projeto
+
+A configuração de CORS foi feita para liberar origens específicas ou de forma global, permitindo que aplicações externas possam consumir os endpoints da API sem bloqueios.
+
+### Vantagens de configurar o CORS corretamente:
+
+- Permite integração com aplicações frontend modernas
+
+- Evita erros de bloqueio em navegadores
+
+- Garante segurança controlando quem pode acessar a API
+
+> 📌 Em ambientes de produção, é recomendado limitar as origens permitidas apenas aos domínios necessários.
 
 ## O que é um Mock?
 
