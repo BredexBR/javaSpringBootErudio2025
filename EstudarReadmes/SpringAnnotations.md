@@ -22,6 +22,9 @@ No Spring Boot, as _annotations_ (anotações) são utilizadas para configurar e
 - **@PutMapping**
   Especialização de `@RequestMapping` para requisições HTTP do tipo `PUT`. Usada para atualizar recursos existentes.
 
+- **@PatchMapping**  
+  Especialização de `@RequestMapping` para requisições HTTP do tipo `PATCH`. Usada para atualizações parciais de recursos.
+
 - **@PathVariable**  
   Indica que o valor de um parâmetro de método será extraído de uma parte da URL. Muito usado para capturar IDs, por exemplo: `/person/{id}`.
 
@@ -61,6 +64,15 @@ No Spring Boot, as _annotations_ (anotações) são utilizadas para configurar e
   - `TemporalType.DATE` (apenas data)
   - `TemporalType.TIME` (apenas hora)
   - `TemporalType.TIMESTAMP` (data e hora)
+
+- **@Transactional**  
+  Indica que o método ou classe deve ser executado dentro de uma transação. O Spring gerencia automaticamente o commit ou rollback da transação.
+
+- **@Modifying**  
+  Usada em repositórios para indicar que a query altera dados (como `INSERT`, `UPDATE` ou `DELETE`). Deve ser usada junto com `@Query`.
+
+- **@Query**  
+  Permite definir queries personalizadas em métodos de repositórios Spring Data. Pode utilizar JPQL ou SQL nativo.
 
 ## 🔧 Java Comum
 
