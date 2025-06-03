@@ -28,6 +28,9 @@ No Spring Boot, as _annotations_ (anotações) são utilizadas para configurar e
 - **@PathVariable**  
   Indica que o valor de um parâmetro de método será extraído de uma parte da URL. Muito usado para capturar IDs, por exemplo: `/person/{id}`.
 
+- **@RequestParam**  
+  Indica que um parâmetro deve ser lido da **query string** da URL (ex: `/search?term=abc`). Útil para valores opcionais ou filtros em requisições HTTP.
+
 - **@RequestBody**  
   Informa ao Spring que o corpo da requisição HTTP deve ser convertido em um objeto Java. É usado principalmente em requisições `POST` e `PUT`.
 
@@ -73,6 +76,9 @@ No Spring Boot, as _annotations_ (anotações) são utilizadas para configurar e
 
 - **@Query**  
   Permite definir queries personalizadas em métodos de repositórios Spring Data. Pode utilizar JPQL ou SQL nativo.
+
+- **@Relation**  
+  Utilizada em projetos que seguem o padrão HATEOAS. Define o nome da relação entre o recurso atual e outros recursos, geralmente usada em respostas JSON HAL.
 
 ## 🔧 Java Comum
 

@@ -20,10 +20,11 @@ JWT JUnit 5 Mockito React JS do 0 à AWS e GCP e+" e aprender seus conceitos.
 - [Testes unitários com Mockito e JUnit 5](#testes-unitários-com-mockito-e-junit-5)
 - [Testes de Integração](#testes-de-integração)
 - [Documentação com Swagger (SpringDoc OpenAPI)](#documentação-com-swagger-springdoc-openapi)
+- [CORS](#cors)
+- [Query Params e Busca Paginada](#query-params-e-busca-paginada)
 - [O que é um Mock?](#o-que-é-um-mock)
 - [Spring Boot Initializr](#spring-boot-initializr)
 - [Pré-requisitos](#pré-requisitos)
-- [CORS](#cors)
 
 ## Person
 
@@ -285,6 +286,40 @@ A configuração de CORS foi feita para liberar origens específicas ou de forma
 - Garante segurança controlando quem pode acessar a API
 
 > 📌 Em ambientes de produção, é recomendado limitar as origens permitidas apenas aos domínios necessários.
+
+## Query Params e Busca Paginada
+
+Este projeto também implementa **busca paginada** utilizando query parameters, o que permite controlar a forma como os dados são retornados pela API, especialmente em grandes volumes.
+
+A busca paginada é útil para:
+
+- Melhorar a performance das requisições
+- Evitar sobrecarregar o cliente com muitos dados de uma vez
+- Facilitar a navegação por grandes listas de recursos
+
+#### Parâmetros aceitos:
+
+- `page`: número da página (começando em 0)
+- `size`: quantidade de registros por página
+- `direction`: direção da ordenação (`asc` para crescente, `desc` para decrescente)
+
+### HAL (Hypertext Application Language)
+
+As respostas da API seguem o padrão **HAL (Hypertext Application Language)**, um formato que adiciona hiperlinks aos dados retornados, facilitando a navegação entre recursos relacionados.
+
+Isso significa que cada item retornado na busca paginada inclui _links_ como:
+
+- `self`: link para o próprio recurso
+- `first`, `prev`, `next`, `last`: links de paginação
+- Ações adicionais, como `update` ou `delete`
+
+### Exemplo visual da resposta:
+
+<br>
+
+![Busca Paginada](imgs/20_BuscaPaginada.png)
+
+> 📌 O uso de HAL facilita a criação de clientes mais inteligentes e alinhados com os princípios RESTful, promovendo a auto-descoberta dos recursos da API.
 
 ## O que é um Mock?
 
