@@ -321,6 +321,26 @@ Isso significa que cada item retornado na busca paginada inclui _links_ como:
 
 > 📌 O uso de HAL facilita a criação de clientes mais inteligentes e alinhados com os princípios RESTful, promovendo a auto-descoberta dos recursos da API.
 
+## Upload e Download de Arquivos
+
+O projeto também implementa funcionalidades de **upload e download de arquivos**, permitindo que clientes da API enviem e recuperem arquivos diretamente do servidor.
+
+### Upload de Arquivo
+
+A API aceita arquivos enviados por meio de uma requisição `POST` com `multipart/form-data`.
+
+### Download de Arquivo
+
+Para baixar um arquivo já armazenado no servidor, basta fazer uma requisição `GET` ao endpoint correspondente, informando o nome do arquivo.
+
+### Vantagens
+
+- Facilita o envio de imagens, documentos e outros arquivos como parte de um fluxo de negócio
+- Permite integrar com sistemas externos ou frontends que trabalham com arquivos
+- Simples de consumir com ferramentas como Postman ou aplicações frontend
+
+> 📌 Os arquivos são armazenados em uma pasta específica do servidor e podem ser protegidos conforme as necessidades do projeto.
+
 ## O que é um Mock?
 
 Um _mock_ é uma simulação de um objeto real. Em contextos de desenvolvimento e testes, mocks são usados para representar dados ou comportamentos esperados de componentes que ainda não foram implementados, ou que não se deseja acessar diretamente (como chamadas a APIs externas ou bancos de dados).

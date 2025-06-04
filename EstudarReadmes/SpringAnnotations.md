@@ -44,6 +44,12 @@ No Spring Boot, as _annotations_ (anotações) são utilizadas para configurar e
 - **@Service**  
   Indica que a classe é um serviço de negócio e será gerenciada pelo Spring como um _bean_. Essa anotação ajuda a organizar a lógica de negócio da aplicação, separando-a dos controladores e repositórios.
 
+- **@Configuration**  
+  Indica que a classe contém definições de beans e configurações da aplicação. Classes anotadas com `@Configuration` são processadas pelo Spring para gerar beans no contexto da aplicação.
+
+- **@ConfigurationProperties**  
+  Associa propriedades definidas em arquivos `.properties` ou `.yml` a uma classe Java. É útil para carregar configurações externas em objetos Java, desde que a classe também esteja anotada com `@Component` ou seja registrada como bean.
+
 ## 📦 Persistência e JPA
 
 - **@Entity**  
