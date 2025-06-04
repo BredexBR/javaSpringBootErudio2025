@@ -1,14 +1,13 @@
-package br.com.erudio.data.dto;
+package br.com.erudio.integrationtests.dto;
 
-import org.springframework.hateoas.RepresentationModel;
-import org.springframework.hateoas.server.core.Relation;
+import jakarta.xml.bind.annotation.XmlRootElement;
 
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
 
-@Relation(collectionRelation = "books")
-public class BookDTO extends RepresentationModel<BookDTO> implements Serializable {
+@XmlRootElement
+public class BookDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 

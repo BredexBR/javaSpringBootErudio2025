@@ -143,6 +143,12 @@ No Spring Boot, as _annotations_ (anotações) são utilizadas para configurar e
 - **@Order**  
   Define a **ordem de execução** de um método de teste quando `@TestMethodOrder(OrderAnnotation.class)` está presente.
 
+- **@DataJpaTest**  
+  Configura um ambiente de teste focado em JPA. Carrega apenas os componentes relacionados ao JPA (como repositórios e entidades) e utiliza um banco de dados em memória por padrão.
+
+- **@AutoConfigureTestDatabase**  
+  Permite configurar se o Spring deve substituir o datasource por um banco de dados em memória durante os testes. Muito útil para testes com repositórios reais, como com H2.
+
 ## 📚 Documentação com Swagger (OpenAPI)
 
 - **@Operation**  
