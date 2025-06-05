@@ -329,9 +329,13 @@ O projeto também implementa funcionalidades de **upload e download de arquivos*
 
 A API aceita arquivos enviados por meio de uma requisição `POST` com `multipart/form-data`.
 
+![Upload de arquivo](imgs/21_UploadDeArquivo.png)
+
 ### Download de Arquivo
 
 Para baixar um arquivo já armazenado no servidor, basta fazer uma requisição `GET` ao endpoint correspondente, informando o nome do arquivo.
+
+![Download de arquivo](imgs/21_DownloadDeArquivo.png)
 
 ### Vantagens
 
