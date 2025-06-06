@@ -6,11 +6,6 @@ JWT JUnit 5 Mockito React JS do 0 à AWS e GCP e+" e aprender seus conceitos.
 ## Índice
 
 - [Person](#person)
-- [FindByID](#findbyid)
-- [FindAll](#findall)
-- [Create](#create)
-- [Update](#update)
-- [Delete](#delete)
 - [Book](#book)
 - [Logs no Spring Boot](#logs-no-spring-boot)
 - [Padrão DTO com Dozer Mapper](#padrão-dto-com-dozer-mapper)
@@ -22,15 +17,18 @@ JWT JUnit 5 Mockito React JS do 0 à AWS e GCP e+" e aprender seus conceitos.
 - [Documentação com Swagger (SpringDoc OpenAPI)](#documentação-com-swagger-springdoc-openapi)
 - [CORS](#cors)
 - [Query Params e Busca Paginada](#query-params-e-busca-paginada)
+- [Upload e Download de Arquivos](#upload-e-download-de-arquivos)
 - [O que é um Mock?](#o-que-é-um-mock)
 - [Spring Boot Initializr](#spring-boot-initializr)
+- [Geração de Mocks com Mockaroo](#geração-de-mocks-com-mockaroo)
+- [Dependências utilizadas](#dependências-utilizadas)
 - [Pré-requisitos](#pré-requisitos)
 
 ## Person
 
 Este projeto implementa serviços HTTP (`POST`, `GET`, `DELETE` e `PUT`) utilizando Java com Spring Boot. Inicialmente, os dados eram simulados com [mocks](#o-que-é-um-mock), mas o projeto foi evoluído para realizar operações reais de CRUD utilizando um banco de dados MySQL com JPA (Java Persistence API).
 
-## FindByID
+### FindByID
 
 Retorna uma pessoa de acordo com o seu ID:
 
@@ -38,7 +36,7 @@ Retorna uma pessoa de acordo com o seu ID:
 
 ![Exemplo FindByID](imgs/06-findById.png)
 
-## FindAll
+### FindAll
 
 Retorna todas as pessoas presentes:
 
@@ -46,7 +44,7 @@ Retorna todas as pessoas presentes:
 
 ![Exemplo FindAll](imgs/06-findAll.png)
 
-## Create
+### Create
 
 Cria uma pessoa:
 
@@ -54,7 +52,7 @@ Cria uma pessoa:
 
 ![Exemplo Create](imgs/06-create.png)
 
-## Update
+### Update
 
 Atualiza os dados de uma pessoa:
 
@@ -62,7 +60,7 @@ Atualiza os dados de uma pessoa:
 
 ![Exemplo Update](imgs/06-update.png)
 
-## Delete
+### Delete
 
 Deleta os dados de uma pessoa:
 
@@ -355,7 +353,24 @@ No contexto deste projeto, o _mock_ de pessoa é uma classe ou objeto com atribu
 
 Para gerar um novo projeto Spring Boot, acesse o [Spring Initializr](https://start.spring.io/).
 
-### Dependências utilizadas:
+## Geração de Mocks com Mockaroo
+
+Durante o desenvolvimento do projeto, foi utilizado o site [Mockaroo](https://mockaroo.com/) para gerar dados falsos (mocks) de forma rápida, prática e personalizável.
+
+### O que é o Mockaroo?
+
+O **Mockaroo** é uma ferramenta online que permite gerar conjuntos de dados fictícios com campos customizados, tipos variados e formatos exportáveis (como CSV, JSON, SQL etc.).
+
+### Vantagens de usar Mockaroo:
+
+- Economia de tempo na criação de dados para testes
+- Customização de nomes de campos, formatos e quantidades
+- Simulação realista de dados como nomes, endereços, datas, números, etc.
+- Suporte a exportação em diversos formatos compatíveis com APIs e bancos de dados
+
+> 📌 O uso do Mockaroo acelerou significativamente a geração de massa de dados para testes de endpoints e visualização de resultados, substituindo a criação manual de objetos mock.
+
+## Dependências utilizadas
 
 [pom.xml](https://github.com/BredexBR/javaSpringBootErudio2025/blob/main/javaSpringBootErudio2025/pom.xml)
 
