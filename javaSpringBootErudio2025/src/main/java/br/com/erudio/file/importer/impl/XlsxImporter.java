@@ -36,7 +36,7 @@ public class XlsxImporter implements FileImporter {
         while (rowIterator.hasNext()) {
             Row row = rowIterator.next();
             if (isRowValid(row)) {
-               people.add(parseRowToPersonDto(row));
+                people.add(parseRowToPersonDto(row));
             }
         }
         return people;

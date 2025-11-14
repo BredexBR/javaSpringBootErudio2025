@@ -343,6 +343,63 @@ Para baixar um arquivo já armazenado no servidor, basta fazer uma requisição 
 
 > 📌 Os arquivos são armazenados em uma pasta específica do servidor e podem ser protegidos conforme as necessidades do projeto.
 
+## Importação e Exportação de Planilhas Excel e CSV
+
+O projeto também implementa funcionalidades de **importação e exportação
+de dados** nos formatos **Excel (.xlsx)** e **CSV**, permitindo uma
+integração eficiente com sistemas externos, ferramentas de análise e
+planilhas manipuladas por usuários finais.
+
+Esses recursos são essenciais em aplicações que precisam lidar com
+grandes volumes de dados, realizar migrações, importar cadastros ou
+fornecer relatórios.
+
+### 📥 Importação (Upload)
+
+A API permite enviar arquivos Excel ou CSV para realizar a leitura e
+processamento dos dados.
+Durante a importação, o sistema:
+
+- Valida o formato do arquivo enviado
+- Converte os dados para objetos da aplicação
+- Realiza o processamento necessário (cadastro, atualização ou
+  análise)
+- Retorna feedback sobre possíveis erros ou inconsistências
+
+Esse processo é realizado através de um endpoint `POST`.
+
+> 📌 A importação é útil para cadastrar listas de pessoas.
+
+![Importação de arquivo](imgs/22_importacao.png)
+
+---
+
+### 📤 Exportação (Download)
+
+A API também oferece endpoints para **exportar dados em formato Excel ou
+CSV**.
+Ao realizar a exportação, o sistema:
+
+- Consulta os dados diretamente no banco
+- Gera dinamicamente a planilha ou arquivo CSV
+- Retorna o arquivo pronto para download
+
+Essa funcionalidade é ideal para relatórios, backups ou migração de
+dados para outros sistemas.
+
+![Exportação de arquivo](imgs/22_Exportacao1.png)
+
+## ![Exportação de arquivo](imgs/22_Exportacao2.png)
+
+### Vantagens
+
+- Facilita integração com sistemas externos
+- Permite criação de relatórios personalizados
+- Agiliza cadastros em massa
+- Possibilita backup dos dados da aplicação
+- Simples de consumir usando Postman, Insomnia ou frontends como React
+  e Angular
+
 ## O que é um Mock?
 
 Um _mock_ é uma simulação de um objeto real. Em contextos de desenvolvimento e testes, mocks são usados para representar dados ou comportamentos esperados de componentes que ainda não foram implementados, ou que não se deseja acessar diretamente (como chamadas a APIs externas ou bancos de dados).
