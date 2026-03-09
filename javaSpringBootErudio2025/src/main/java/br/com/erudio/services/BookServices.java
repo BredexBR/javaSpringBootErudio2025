@@ -43,7 +43,7 @@ public class BookServices {
             addHateoasLinks(dto);
             return dto;
         });
-
+        
         Link findAllLink = WebMvcLinkBuilder.linkTo(
                         WebMvcLinkBuilder.methodOn(BookController.class)
                                 .findAll(
@@ -58,7 +58,7 @@ public class BookServices {
         logger.info("Finding one Book!");
 
         var entity = repository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("No records found for this ID!"));
+            .orElseThrow(() -> new ResourceNotFoundException("No records found for this ID!"));
         var dto =  parseObject(entity, BookDTO.class);
         addHateoasLinks(dto);
         return dto;

@@ -17,10 +17,10 @@ public class WebConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         var allowedOrigins = corsOriginPatterns.split(",");
         registry.addMapping("/**")
-                .allowedOrigins(allowedOrigins)
-                //.allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS")
-                .allowedMethods("*")
-                .allowCredentials(true);
+            .allowedOrigins(allowedOrigins)
+            //.allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS")
+            .allowedMethods("*")
+            .allowCredentials(true);
     }
 
     @Override
@@ -28,9 +28,9 @@ public class WebConfig implements WebMvcConfigurer {
 
         // Via HEADER PARAM http://localhost:8080/api/person/v1/2
         configurer.favorParameter(false)
-                .ignoreAcceptHeader(false)
-                .useRegisteredExtensionsOnly(false)
-                .defaultContentType(MediaType.APPLICATION_JSON)
+            .ignoreAcceptHeader(false)
+            .useRegisteredExtensionsOnly(false)
+            .defaultContentType(MediaType.APPLICATION_JSON)
                 .mediaType("json", MediaType.APPLICATION_JSON)
                 .mediaType("xml", MediaType.APPLICATION_XML)
                 .mediaType("yaml", MediaType.APPLICATION_YAML)
