@@ -1,7 +1,11 @@
-# javaSpringBootErudio2025
+# 📚 Bookstore API
 
-Projeto realizado para acompanhar o curso da udemy "Aprenda Spring Boot framework Swagger Docker Kubernetes K8s API RESTful
-JWT JUnit 5 Mockito React JS do 0 à AWS e GCP e+" e aprender seus conceitos.
+RESTful API para gerenciamento de uma livraria, desenvolvida com Spring Boot.  
+O projeto implementa boas práticas de desenvolvimento backend seguindo os princípios do **Glory of REST**, incluindo versionamento de API, testes automatizados e documentação com Swagger.
+
+A API permite o gerenciamento completo de livros, incluindo operações de criação, consulta, atualização e remoção.
+
+---
 
 ## Índice
 
@@ -430,7 +434,7 @@ O **Mockaroo** é uma ferramenta online que permite gerar conjuntos de dados fic
 
 ## Dependências utilizadas
 
-[pom.xml](https://github.com/BredexBR/javaSpringBootErudio2025/blob/main/javaSpringBootErudio2025/pom.xml)
+[pom.xml](https://github.com/BredexBR/bookstore-api/blob/main/bookstore-api/pom.xml)
 
 ## Pré-requisitos
 

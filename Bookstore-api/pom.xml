@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.erudio</groupId>
-	<artifactId>javaSpringBootErudio2025</artifactId>
+	<artifactId>Bookstore-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>javaSpringBootErudio2025</name>
 	<description>Demo project for Spring Boot</description>
